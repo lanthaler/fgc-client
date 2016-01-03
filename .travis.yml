@@ -17,7 +17,7 @@ matrix:
     - php: hhvm
   include:
     - php: 5.5
-      env: COVERAGE=true PHPUNIT_FLAGS="--coverage-clover build/coverage.xml"
+      env: COVERAGE=true
 
 before_install:
   - composer self-update
@@ -27,6 +27,10 @@ install:
 
 before_script:
   - vendor/bin/http_test_server > /dev/null 2>&1 &
+  - if [[ "$COVERAGE" = true ]]; then PHPUNIT_FLAGS="--coverage-clover build/clover.xml"; else PHPUNIT_FLAGS=""; fi
+
+script:
+  - phpunit $PHPUNIT_FLAGS
 
 after_success:
   - if [[ "$COVERAGE" = true ]]; then wget https://scrutinizer-ci.com/ocular.phar; fi
