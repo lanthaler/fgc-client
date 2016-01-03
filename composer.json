@@ -29,8 +29,5 @@
     },
     "autoload": {
         "psr-4": { "ML\\FgcClient\\": "" }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit"
     }
 }

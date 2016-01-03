@@ -148,7 +148,6 @@ class FgcHttpClient implements \Http\Client\HttpClient
             )
         );
 
-
         $response = $this->messageFactory->createResponse();
         if (false === ($responseBody = @file_get_contents((string) $request->getUri(), false, $context))) {
             if (!isset($http_response_header)) {
