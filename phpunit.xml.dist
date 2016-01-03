@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         bootstrap="vendor/autoload.php">
+
+    <testsuites>
+        <testsuite name="fgc-client Test Suite">
+            <directory>Test/</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <server name="TEST_SERVER" value="http://127.0.0.1:10000/server.php" />
+    </php>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./</directory>
+            <exclude>
+                <directory>./Tests</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+
+    <logging>
+      <log type="coverage-text" target="php://stdout" showUncoveredFiles="true" />
+    </logging>
+</phpunit>
