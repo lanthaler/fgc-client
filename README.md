@@ -17,7 +17,7 @@ Please note that HTTPlug hasn't released a stable version yet. Thus, for the
 time being, you need to set the minimum stability in your `composer.json`
 file to `beta`:
 
-```json
+```
 {
     ...
     "minimum-stability": "beta",
@@ -28,11 +28,9 @@ file to `beta`:
 
 ## Usage
 
-### Using [php-http/message](https://packagist.org/packages/php-http/message) and [guzzlehttp/psr7](https://packagist.org/packages/guzzlehttp/psr7):
+After having installed the desired dependencies
 
-After having installed the dependencies with
-
-    php composer.phar require php-http/message ^0.2 guzzlehttp/psr7 ^1.0
+    php composer.phar require guzzlehttp/psr7 ^1.0 php-http/message ^0.2
 
 issuing an HTTP request is quite straightforward:
 
