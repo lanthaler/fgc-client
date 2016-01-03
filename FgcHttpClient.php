@@ -104,13 +104,13 @@ class FgcHttpClient implements \Http\Client\HttpClient
         }
 
         $streamContextOptions = array(
-          'protocol_version' => $request->getProtocolVersion(),
-          'method'           => $request->getMethod(),
-          'header'           => implode("\r\n", $headers),
-          'timeout'          => $this->timeout,
-          'ignore_errors'    => true,
-          'follow_location'  => $this->followRedirects ? 1 : 0,
-          'max_redirects'    => 100
+            'protocol_version' => $request->getProtocolVersion(),
+            'method'           => $request->getMethod(),
+            'header'           => implode("\r\n", $headers),
+            'timeout'          => $this->timeout,
+            'ignore_errors'    => true,
+            'follow_location'  => $this->followRedirects ? 1 : 0,
+            'max_redirects'    => 100
         );
 
         if (strlen($body) > 0) {
