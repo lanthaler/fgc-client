@@ -20,8 +20,8 @@
     },
     "require-dev": {
         "guzzlehttp/psr7": "^1.0",
-        "php-http/utils": "^0.2",
-        "php-http/adapter-integration-tests": "dev-master#48e5c0ee7b19772ab00060498f91886268b945c4",
+        "php-http/message": "^0.2",
+        "php-http/adapter-integration-tests": "dev-master",
         "phpunit/phpunit": "^4.8"
     },
     "provide": {

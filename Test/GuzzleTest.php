@@ -11,8 +11,8 @@ namespace ML\FgcClient\Test;
 
 use Http\Client\HttpClient;
 use Http\Client\Tests\HttpClientTest;
-use Http\Client\Utils\MessageFactory\GuzzleMessageFactory;
-use Http\Client\Utils\StreamFactory\GuzzleStreamFactory;
+use Http\Message\MessageFactory\GuzzleMessageFactory;
+use Http\Message\StreamFactory\GuzzleStreamFactory;
 use ML\FgcClient\FgcHttpClient;
 
 /**
