@@ -27,7 +27,7 @@ install:
 
 before_script:
   - vendor/bin/http_test_server > /dev/null 2>&1 &
-  - if [[ "$COVERAGE" = true ]]; then PHPUNIT_FLAGS="--coverage-clover build/clover.xml"; else PHPUNIT_FLAGS=""; fi
+  - if [[ "$COVERAGE" = true ]]; then PHPUNIT_FLAGS="--coverage-clover build/coverage.xml"; else PHPUNIT_FLAGS=""; fi
 
 script:
   - phpunit $PHPUNIT_FLAGS
@@ -35,3 +35,4 @@ script:
 after_success:
   - if [[ "$COVERAGE" = true ]]; then wget https://scrutinizer-ci.com/ocular.phar; fi
   - if [[ "$COVERAGE" = true ]]; then php ocular.phar code-coverage:upload --format=php-clover build/coverage.xml; fi
+
