@@ -1,33 +1,33 @@
 {
-    "name": "ml/fgc-client",
-    "type": "library",
-    "description": "HTTPlug-conformant file_get_contents HTTP client",
-    "keywords": [ "HTTP", "HTTPS", "file_get_contents", "PHP-HTTP", "HTTPlug", "Web API", "REST" ],
-    "homepage": "http://www.markus-lanthaler.com",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Markus Lanthaler",
-            "email": "mail@markus-lanthaler.com",
-            "homepage": "http://www.markus-lanthaler.com",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": ">=5.4",
-        "php-http/httplug": "^1.0.0-beta",
-        "php-http/message-factory": "^1.0"
-    },
-    "require-dev": {
-        "guzzlehttp/psr7": "^1.0",
-        "php-http/message": "^0.2",
-        "php-http/adapter-integration-tests": "dev-master",
-        "phpunit/phpunit": "^4.8"
-    },
-    "provide": {
-        "psr/http-message-implementation": "1.0"
-    },
-    "autoload": {
-        "psr-4": { "ML\\FgcClient\\": "" }
+  "name": "ml/fgc-client",
+  "type": "library",
+  "description": "HTTPlug-conformant file_get_contents HTTP client",
+  "keywords": [ "HTTP", "HTTPS", "file_get_contents", "PHP-HTTP", "HTTPlug", "Web API", "REST" ],
+  "homepage": "http://www.markus-lanthaler.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Markus Lanthaler",
+      "email": "mail@markus-lanthaler.com",
+      "homepage": "http://www.markus-lanthaler.com",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "php-http/httplug": "^1.0",
+    "php-http/message-factory": "^1.0"
+  },
+  "require-dev": {
+    "guzzlehttp/psr7": "^1.0",
+    "php-http/message": "^1.0",
+    "php-http/adapter-integration-tests": "^0.4",
+    "phpunit/phpunit": "^4.8"
+  },
+  "provide": {
+    "psr/http-message-implementation": "1.0"
+  },
+  "autoload": {
+    "psr-4": { "ML\\FgcClient\\": "" }
+  }
 }
